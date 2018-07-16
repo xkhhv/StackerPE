@@ -3,7 +3,7 @@
 ## License
 | License |
 | :---: |
-| [![StackerPE License](https://img.shields.io/github/license/iiFlamiinBlaze/BlazinJoin.svg?label=License)](LICENSE) |
+| [![StackerPE License](https://img.shields.io/github/license/xkhhv/StackerPE.svg?label=License)](LICENSE) |
 
 Make sure to read all of the license as it could change at anytime.
 

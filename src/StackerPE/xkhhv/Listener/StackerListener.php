@@ -82,6 +82,7 @@ class StackerListener implements Listener{
         $player = $event->getPlayer();
         if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
             Loader::getInstance()->dismountFromPlayer($player);
+            $player->teleport(new Vector3($player->x, $player->y - 1, $player->z));
         }
     }
 }

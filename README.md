@@ -10,8 +10,8 @@ Make sure to read all of the license as it could change at anytime.
 ## Information
 SOON
  
-This plugin allows you to add many enhancements to a player when they join the server through configs. This plugin is for anyone to use.
-If you have any issues with the plugin, please make an issue [here](https://github.com/iiFlamiinBlaze/BlazinJoin/issues/new).
+This plugin allows you to ride any player using Saddle. This plugin is for anyone to use.
+If you have any issues with the plugin, please make an issue [here](https://github.com/xkhhv/StackerPE/issues/new).
 * Credits: [xkhhv](https://github.com/xkhhv)
 * My PMMP: [KHAV](https://forums.pmmp.io/members/khav.130/)
 * My Instagram: [@khavmc](https://www.instagram.com/khavmc/)

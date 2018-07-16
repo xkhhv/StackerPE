@@ -37,7 +37,7 @@ class StackerListener implements Listener{
         }
     }
 
-    public function DataPacketReceive(DataPacketReceiveEvent $event): void {
+    public function DataPacketReceive(DataPacketReceiveEvent $event){
         $packet = $event->getPacket();
         $player = $event->getPlayer();
         if($packet instanceof PlayerActionPacket) {
@@ -53,28 +53,35 @@ class StackerListener implements Listener{
 
     public function onQuit(PlayerQuitEvent $event){
         $player = $event->getPlayer();
-        Loader::getInstance()->dismountFromPlayer($player);
-        $player->teleport(new Vector3($player->x, $player->y -1, $player->z));
+        if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
+            Loader::getInstance()->dismountFromPlayer($player);
+            $player->teleport(new Vector3($player->x, $player->y - 1, $player->z));
+        }
     }
 
     public function onChangeWorld(EntityLevelChangeEvent $event){
         $player = $event->getEntity();
-        if ($player instanceof Player){
-            Loader::getInstance()->dismountFromPlayer($player);
-            $player->teleport(new Vector3($player->x, $player->y -1, $player->z));
+        if ($player instanceof Player) {
+            if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
+                Loader::getInstance()->dismountFromPlayer($player);
+                $player->teleport(new Vector3($player->x, $player->y - 1, $player->z));
+            }
         }
     }
 
     public function onTeleport(EntityTeleportEvent $event){
         $player = $event->getEntity();
-        if ($player instanceof Player){
-            Loader::getInstance()->dismountFromPlayer($player);
+        if ($player instanceof Player) {
+            if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
+                Loader::getInstance()->dismountFromPlayer($player);
+            }
         }
     }
 
     public function onSneak(PlayerToggleSneakEvent $event){
         $player = $event->getPlayer();
-        Loader::getInstance()->dismountFromPlayer($player);
+        if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
+            Loader::getInstance()->dismountFromPlayer($player);
+        }
     }
-
 }

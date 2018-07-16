@@ -4,4 +4,5 @@ branches:
 projects:
   StackerPE:
     path: ""
+    icon: stacker.png
 ...

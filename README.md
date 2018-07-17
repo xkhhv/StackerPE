@@ -1,11 +1,9 @@
 # StackerPE
 
 ## License
-| License |
-| :---: |
-| [![StackerPE License](https://img.shields.io/github/license/xkhhv/StackerPE.svg?label=License)](LICENSE) |
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Make sure to read all of the license as it could change at anytime.
+[ApiUpdaterDP](https://github.com/r7vmc/ApiUpdaterDP) by [r7vmc](https://github.com/r7vmc) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). Permissions beyond the scope of this license may be available on request.
 
 ## Information
 SOON

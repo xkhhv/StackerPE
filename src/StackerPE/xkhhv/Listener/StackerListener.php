@@ -28,9 +28,11 @@ class StackerListener implements Listener{
                 if ($damager->getInventory()->getItemInHand()->getId() == 329) {
                     if (in_array(strtolower($damager->getName()), Loader::getInstance()->rider)) {
                         $damager->sendMessage(TextFormat::RED . "This Player is already ridden!");
+			$event->setCancelled(true);    
                     } else {
                         Loader::getInstance()->sitOnPlayer($damager, $entity);
                         $damager->sendTip(TextFormat::GRAY . "Jump to dismount...!");
+			$event->setCancelled(true);
                     }
                 }
             }

@@ -43,7 +43,7 @@ class Loader extends PluginBase{
      * @return bool
      */
     public function sitOnPlayer(Player $damager, Player $entity): bool{
-        if (!$damager->isSneaking() && $damager->isSurvival()) {
+        if (!$damager->isSneaking() || $damager->isSurvival()) {
             $damager->setMotion(new Vector3(0, 0.2, 0));
 
             $pk = new AddEntityPacket();

@@ -41,14 +41,22 @@ class StackerListener implements Listener{
         $packet = $event->getPacket();
         $player = $event->getPlayer();
         if($packet instanceof PlayerActionPacket) {
-            if($packet->action === $packet::ACTION_JUMP) {
+            if($packet->action === $packet::ACTION_JUMP) :
                 if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
                     Loader::getInstance()->dismountFromPlayer($player);
                     $player->sendMessage("You dismount successfully!");
                     $player->teleport(new Vector3($player->x, $player->y -1, $player->z));
                 }
+            endif;
+        }elseif ($packet instanceof \pocketmine\network\mcpe\protocol\InteractPacket) { # IF Player Leave VEHICLE [1B]
+	    if ($packet->action === 3):
+            if (in_array(strtolower($player->getName()), Loader::getInstance()->rider)) {
+                    Loader::getInstance()->dismountFromPlayer($player);
+                    $player->sendMessage("You dismount successfully!");
+                    $player->teleport(new Vector3($player->x, $player->y -1, $player->z));
             }
-        }
+            endif;
+    }
     }
 
     public function onQuit(PlayerQuitEvent $event){

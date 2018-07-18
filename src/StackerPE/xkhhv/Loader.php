@@ -22,7 +22,6 @@ class Loader extends PluginBase{
 
     public $rider = array();
 
-
     /** @var self $instance */
     private static $instance;
 
@@ -37,7 +36,6 @@ class Loader extends PluginBase{
     public static function getInstance(): self{
         return self::$instance;
     }
-
 
     /**
      * @return bool
